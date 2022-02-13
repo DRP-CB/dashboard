@@ -42,7 +42,7 @@ def load_data():
     return data, unscaledData, defaultClientsData, paybackClientsData, descriptions
 
 
-#@st.cache(persist=True)
+@st.cache(allow_output_mutation=True)
 def load_explainer():
     shap.initjs()
     explainer = joblib.load(explainerPath)
