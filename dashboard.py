@@ -15,7 +15,7 @@ datasetPath = "sampleData.csv"
 explainerPath = "explainer.pkl"
 descriptionsPath = "descriptions.csv"
 scalerPath = "scaler.pkl"
-url = 'https://paulderuta.pythonanywhere.com/pred'
+url = "https://paulderuta.pythonanywhere.com/pred"
 
 seuilattribution = 0.73
 
@@ -39,12 +39,10 @@ def load_data():
 
     descriptions = pd.read_csv(descriptionsPath)
 
-    # data = data.sample(2000)
-
     return data, unscaledData, defaultClientsData, paybackClientsData, descriptions
 
 
-@st.cache(persist=True)
+#@st.cache(persist=True)
 def load_explainer():
     shap.initjs()
     explainer = joblib.load(explainerPath)
