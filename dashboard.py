@@ -15,7 +15,7 @@ datasetPath = "sampleData.csv"
 explainerPath = "explainer.pkl"
 descriptionsPath = "descriptions.csv"
 scalerPath = "scaler.pkl"
-url = "http://localhost:5000/pred"
+url = 'https://paulderuta.pythonanywhere.com/pred'
 
 seuilattribution = 0.73
 
