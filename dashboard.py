@@ -284,6 +284,8 @@ elif usecase == panneau2:
         submit_button = st.form_submit_button(label="Visualiser")
         if not features:
             pass
+        elif selectedData.shape[0] == 0:
+            st.write("### Aucune donnée disponible avec les filtres selectionnés. \n #### Essayez une sélection plus générale.")
         elif len(features) < 2:
             fig = px.histogram(
                 selectedData,
